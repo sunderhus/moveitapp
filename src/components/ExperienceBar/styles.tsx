@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import {Colors, Fonts} from '../../styles/global';
 
 export const ExperienceBarContainer = styled.SafeAreaView`
   flex: 1;
@@ -10,6 +11,8 @@ export const ExperienceBarContainer = styled.SafeAreaView`
 
 export const ExperienceText = styled.Text`
   font-size: 16px;
+  font-family: ${Fonts.inter.regular};
+  color: ${Colors.text};
 `;
 
 export const ProgressContainer = styled.View`
@@ -17,7 +20,7 @@ export const ProgressContainer = styled.View`
   margin: 0 16px;
   border-radius: 4px;
   position: relative;
-  background: grey;
+  background: ${Colors.greyLine};
 `;
 export const ExperienceLine = styled.View`
   height: 4px;
@@ -27,11 +30,11 @@ export const ExperienceLine = styled.View`
 export const Progress = styled.View`
   height: 4px;
   border-radius: 4px;
-  background: #4cd62b;
+  background: ${Colors.green};
 `;
 
-export const CurrentExperience = styled.Text`
-  font-size: 16px;
+export const CurrentExperience = styled(ExperienceText)`
   position: absolute;
   top: 4px;
+  font-family: ${Fonts.inter.bold};
 `;
