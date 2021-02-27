@@ -1,7 +1,12 @@
 import React from 'react';
+import ExperienceBar from '../../components/ExperienceBar';
 import {Container} from './styles';
 
 const Home: React.FC = () => {
-  return <Container>Hello NLW4</Container>;
+  return (
+    <Container>
+      <ExperienceBar />
+    </Container>
+  );
 };
 export default Home;
