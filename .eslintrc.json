@@ -29,6 +29,8 @@
     "prettier"
   ],
   "rules": {
+    "no-plusplus":"off",
+    "no-restricted-properties":"off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "react/jsx-closing-bracket-location": [

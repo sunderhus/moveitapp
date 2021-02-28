@@ -1,4 +1,5 @@
 import React from 'react';
+import {useChallenge} from '../../hooks/challenge';
 import {
   CurrentExperience,
   ExperienceBarContainer,
@@ -9,7 +10,10 @@ import {
 } from './styles';
 
 const ExperienceBar: React.FC = () => {
-  const percentualToNextLevel = Math.round(20 * 100) / 64;
+  const {experienceToNextLevel, currentExperience} = useChallenge();
+
+  const percentualToNextLevel =
+    Math.round(currentExperience * 100) / experienceToNextLevel;
 
   return (
     <>
@@ -18,15 +22,16 @@ const ExperienceBar: React.FC = () => {
         <ProgressContainer>
           <ExperienceLine />
           <Progress style={{width: `${percentualToNextLevel}%`}} />
+
           <CurrentExperience
             style={{
               left: `${percentualToNextLevel}%`,
               transform: [{translateX: -16}],
             }}>
-            10 xp
+            {`${currentExperience}xp`}
           </CurrentExperience>
         </ProgressContainer>
-        <ExperienceText>64 xp</ExperienceText>
+        <ExperienceText>{`${experienceToNextLevel}xp`}</ExperienceText>
       </ExperienceBarContainer>
     </>
   );

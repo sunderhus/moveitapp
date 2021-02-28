@@ -1,6 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import LevelIcon from '../../assets/icons/level.svg';
+import {useCountdown} from '../../hooks/countdown';
 import {Colors} from '../../styles/global';
 import {
   Container,
@@ -14,13 +15,17 @@ import {
 } from './styles';
 
 const Countdown: React.FC = () => {
-  const minutes = 25 * 60;
-  const seconds = minutes % 60;
-  const hasFinished = false;
-  const isActive = false;
+  const {
+    hasFinished,
+    isActive,
+    minutes,
+    seconds,
+    resetCountdown,
+    startCountdown,
+  } = useCountdown();
+
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
-
   return (
     <View>
       <Container>
@@ -49,13 +54,17 @@ const Countdown: React.FC = () => {
       ) : (
         <>
           {isActive ? (
-            <CountdownButton backgroundVariation={`${Colors.red}`}>
+            <CountdownButton
+              backgroundVariation={`${Colors.red}`}
+              onPress={resetCountdown}>
               <CountdownButtonText customColor={`${Colors.white}`}>
                 Abandonar ciclo
               </CountdownButtonText>
             </CountdownButton>
           ) : (
-            <CountdownButton backgroundVariation={`${Colors.blue}`}>
+            <CountdownButton
+              backgroundVariation={`${Colors.blue}`}
+              onPress={startCountdown}>
               <CountdownButtonText customColor={`${Colors.white}`}>
                 Iniciar ciclo
               </CountdownButtonText>
