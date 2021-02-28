@@ -5,6 +5,8 @@
 
 <h1 align="center">
     Bootcamp NLW#4
+  <img alt=" Moveit App" title=" Moveit App" src=".github/mock01.png" />
+
 </h1>
 
 <p align="center">
@@ -18,6 +20,7 @@
 </p>
 
 <p align="center">
+
   <img alt="PRs welcome!" src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=15C3D6&labelColor=000000" />
   <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg"/>
   <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
@@ -27,9 +30,7 @@
 <br>
 
 <p align="center">
-    <img alt="PRs welcome!" src="./.github/mock02.png" />
-
-  <img alt=" Moveit App" title=" Moveit App" src=".github/mock01.png" />
+  <img alt="Moveit App" src="./.github/mock02.png" />
 </p>
 
 ## 🚀 Required
@@ -45,7 +46,7 @@ My web version of this project can be found here [Git - Moveit WEB](http://www.g
 <br>
 
 If you are looking for this project download or seeing online, try this options below:<br>
-[📲 Android APK download ](https://drive.google.com/file/d/1Jl5K0wlnTn8pQ84jwPwFdmTvouR95w6j/view?usp=sharing)<br>
+[📲 Android APK download ](https://drive.google.com/file/d/1NQXSEzeBlZ1Gh6fUI-61Ex2ZIqC0LPEi/view?usp=sharing)<br>
 
 [💻 Hosted on Netlify](https://letsmoveit.netlify.app/)<br>
 [💻 Hosted on Vercel](https://letsmoveitnow.vercel.app/)<br>
