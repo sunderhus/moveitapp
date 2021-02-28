@@ -1,45 +1,100 @@
-# Moveit App - React Native + TypeScript
+# Moveit App - React Native⚛ + Typescript
 
-<p>
-  <a href="https://github.com/react-native-community/react-native-template-typescript#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
-  </a>
+
+<hr>
+
+<h1 align="center">
+    Bootcamp NLW#4
+</h1>
+
+<p align="center">
+  <a href="#-Required">Required</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Challenge">Challenge</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#construction_worker-Execute">Execute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#iphone-Run">Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-License">License</a>
 </p>
 
-## 🎏 Usage
+<p align="center">
+  <img alt="PRs welcome!" src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=15C3D6&labelColor=000000" />
+  <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg"/>
+  <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=15C3D6&labelColor=000000">
+</p>
 
-```sh
-mkdir app
-cd app
-git clone https://github.com/sunderhus/moveitapp.git
-cd moveitapp && code .
-yarn
+<br>
+
+<p align="center">
+    <img alt="PRs welcome!" src="./.github/mock02.png" />
+
+  <img alt=" Moveit App" title=" Moveit App" src=".github/mock01.png" />
+</p>
+
+## 🚀 Required
+[Node](https://nodejs.org/en/download/)
+[Yarn](https://yarnpkg.com/)
+[Android Studio](https://developer.android.com/studio)
+
+## 💻 Project
+<p>App developed after ReactJS WEB path of NLW#4. In order to create a full functional version on mobile devices of Moveit web application.</p>
+
+<br>
+My web version of this project can be found here [Git - Moveit WEB](http://www.github.com/sunderhus/moveitnext).
+<br>
+
+If you are looking for this project download or seeing online, try this options below:<br>
+[📲 Android APK download ](https://drive.google.com/file/d/1Jl5K0wlnTn8pQ84jwPwFdmTvouR95w6j/view?usp=sharing)<br>
+
+[💻 Hosted on Netlify](https://letsmoveit.netlify.app/)<br>
+[💻 Hosted on Vercel](https://letsmoveitnow.vercel.app/)<br>
+
+## 🔖 Layout
+
+You can find the base layout here 👉 [Figma - Moveit Web](https://www.figma.com/file/nQyrP7Sl5QUZ1mlZINmjQi/Move.it-1.0-Copy).
+
+
+## 🧠 How i moved this project to the next level
+
+✅ Converted from ReactJS to ReactNative. <br>
+✅ Creating workflow with Github hooks to generated a Android APK artefact.<br>
+✅ Adding  ESLint, Prettier, Git commit lint.<br>
+✅ Adding  styled-components and navigation.<br>
+✅ Creating custom hooks that reusable on Web and Mobile.<br>
+✅ Adding Async Storage instead of cookies.<br>
+✅ Share the learning with others.<br>
+✅ Stay sharp on both platforms.<br>
+
+## :construction_worker: How to execute
+
+```bash
+# Clone repository
+$ git clone https://github.com/sunderhus/moveitapp
+```
+### :iphone: Run
+
+```bash
+# clone and open on your favorite IDE, in my case Visual Studio Code.
+$ cd moveitapp && code .
+
+# install all dependencies.
+$ yarn
+
+#👽 run in Android device emulator .
+$ yarn android
+
+#🍎 run in  Ios device emulator .
+$ yarn ios
 ```
 
-## 👽 Android 
+## :memo: License
 
-```sh
-yarn android
-```
+This project is under MIT License. check-out this file here 👉 [LICENSE](LICENSE.md).
 
-## 🍎 IOS
+---
 
-```sh
-yarn ios
-```
 
-### Good to know, on the legacy CLI
-Prefere using `npx`, this avoid out of date react-native-cli.<br>
-This project only works with the new CLI. Make sure you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`), for the below command to work. If you wish to not use `npx`, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
+Made by Matheus Sunderhus : [Linkedin!](https://www.linkedin.com/in/matheus-sunderhus/)
 
-Further information can be found here: https://github.com/react-native-community/cli#about
 
-## :bookmark: License
-
-This project is [MIT](LICENSE.md) licensed.
