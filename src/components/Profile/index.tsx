@@ -1,4 +1,5 @@
 import React from 'react';
+import {PixelRatio, Text} from 'react-native';
 import LevelIcon from '../../assets/icons/level.svg';
 import {
   Level,
