@@ -1,6 +1,6 @@
 import React from 'react';
-import {PixelRatio, Text} from 'react-native';
 import LevelIcon from '../../assets/icons/level.svg';
+import {useChallenge} from '../../hooks/challenge';
 import {
   Level,
   ProfileContainer,
@@ -11,7 +11,7 @@ import {
 } from './styles';
 
 const Profile: React.FC = () => {
-  const level = 1;
+  const {level} = useChallenge();
 
   return (
     <ProfileContainer>

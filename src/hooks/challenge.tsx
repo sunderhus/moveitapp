@@ -36,9 +36,7 @@ const ChallengeProvider: React.FC = ({children}) => {
   const [level, setLevel] = useState(1);
   const [currentExperience, setCurrentExperience] = useState(0);
   const [challengesCompleted, setChallengesCompleted] = useState(0);
-  const [activeChallenge, setActiveChallenge] = useState<IChallenge>(
-    {} as IChallenge,
-  );
+  const [activeChallenge, setActiveChallenge] = useState({} as IChallenge);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
   const [experienceToNextLevel, setExperienceToNetLevel] = useState(() => {
     return Math.pow((level + 1) * 4, 2);

@@ -18,8 +18,8 @@ interface ICountDownButtonTextProps {
 }
 
 export const Container = styled.View`
-  flex: 1;
   flex-flow: row;
+  flex: 1;
   align-items: center;
   justify-content: center;
   font-family: ${Fonts.rajdhani.bold};
@@ -52,7 +52,6 @@ export const CountdownSeparator = styled.Text`
 export const ICountDownButtonDisabledProps = styled(
   TouchableWithoutFeedback,
 )<ICountDownButtonDisabledProps>`
-  flex: 1;
   flex-flow: row;
   justify-content: center;
   align-items: center;
@@ -60,6 +59,7 @@ export const ICountDownButtonDisabledProps = styled(
   margin-top: 32px;
   background: ${Colors.white};
   color: ${Colors.title};
+  margin-bottom: 32px;
 
   ${({borderColor}) =>
     borderColor &&
@@ -69,7 +69,6 @@ export const ICountDownButtonDisabledProps = styled(
     `}
 `;
 export const CountdownButton = styled(TouchableOpacity)<ICountDownButtonProps>`
-  flex: 1;
   flex-flow: row;
   justify-content: center;
   align-items: center;
@@ -78,6 +77,7 @@ export const CountdownButton = styled(TouchableOpacity)<ICountDownButtonProps>`
   background: ${Colors.white};
   color: ${Colors.title};
   background: ${(props) => `${props.backgroundVariation}`};
+  margin-bottom: 32px;
 `;
 
 export const CountdownButtonText = styled.Text<ICountDownButtonTextProps>`

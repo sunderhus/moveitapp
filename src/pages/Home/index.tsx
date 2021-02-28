@@ -1,20 +1,25 @@
 import React from 'react';
+import ChallengeBox from '../../components/ChallengeBox';
 import CompletedChallenges from '../../components/CompletedChallenges';
 import Countdown from '../../components/CountDown';
 import ExperienceBar from '../../components/ExperienceBar';
 import Profile from '../../components/Profile';
 import AppProvider from '../../hooks';
-import {Container} from './styles';
+import {Container, MainSection} from './styles';
 
 const Home: React.FC = () => {
   return (
     <AppProvider>
       <Container>
-        <ExperienceBar />
-        <Profile />
-        <CompletedChallenges />
+        <MainSection>
+          <ExperienceBar />
+          <Profile />
+          <CompletedChallenges />
 
-        <Countdown />
+          <Countdown />
+
+          <ChallengeBox />
+        </MainSection>
       </Container>
     </AppProvider>
   );
