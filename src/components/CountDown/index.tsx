@@ -45,7 +45,7 @@ const Countdown: React.FC = () => {
       </Container>
 
       {hasFinished ? (
-        <ICountDownButtonDisabledProps borderColor={`${Colors.green}`}>
+        <ICountDownButtonDisabledProps borderColor={`${Colors.green}`} disabled>
           <CountdownButtonText customColor={`${Colors.title}`}>
             Ciclo encerrado
           </CountdownButtonText>
@@ -55,6 +55,11 @@ const Countdown: React.FC = () => {
         <>
           {isActive ? (
             <CountdownButton
+              android_ripple={{
+                color: `${Colors.blue}`,
+                borderless: false,
+                radius: 10,
+              }}
               backgroundVariation={`${Colors.red}`}
               onPress={resetCountdown}>
               <CountdownButtonText customColor={`${Colors.white}`}>
@@ -63,6 +68,11 @@ const Countdown: React.FC = () => {
             </CountdownButton>
           ) : (
             <CountdownButton
+              android_ripple={{
+                color: `${Colors.red}`,
+                borderless: false,
+                radius: 10,
+              }}
               backgroundVariation={`${Colors.blue}`}
               onPress={startCountdown}>
               <CountdownButtonText customColor={`${Colors.white}`}>

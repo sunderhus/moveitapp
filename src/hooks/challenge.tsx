@@ -9,6 +9,7 @@ import React, {
 } from 'react';
 
 import {Challenges} from '../../challenges';
+import LevelUpModal from '../components/LevelUpModal';
 
 interface IChallenge {
   type: string;
@@ -72,9 +73,19 @@ const ChallengeProvider: React.FC = ({children}) => {
   }, []);
 
   useEffect(() => {
-    AsyncStorage.setItem('level', String(level));
-    AsyncStorage.setItem('currentExperience', String(currentExperience));
-    AsyncStorage.setItem('challengesCompleted', String(challengesCompleted));
+    async function saveProgress() {
+      await AsyncStorage.setItem('level', String(level));
+      await AsyncStorage.setItem(
+        'currentExperience',
+        String(currentExperience),
+      );
+      await AsyncStorage.setItem(
+        'challengesCompleted',
+        String(challengesCompleted),
+      );
+    }
+
+    saveProgress();
   }, [level, currentExperience, challengesCompleted]);
 
   const levelUp = useCallback(
@@ -147,6 +158,7 @@ const ChallengeProvider: React.FC = ({children}) => {
         closeLevelUpModal,
       }}>
       {children}
+      {isLevelUpModalOpen && <LevelUpModal />}
     </ChallengeContext.Provider>
   );
 };

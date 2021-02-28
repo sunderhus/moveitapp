@@ -1,3 +1,4 @@
+import {Pressable} from 'react-native';
 import {
   TouchableOpacity,
   TouchableWithoutFeedback,
@@ -50,7 +51,7 @@ export const CountdownSeparator = styled.Text`
 `;
 
 export const ICountDownButtonDisabledProps = styled(
-  TouchableWithoutFeedback,
+  Pressable,
 )<ICountDownButtonDisabledProps>`
   flex-flow: row;
   justify-content: center;
@@ -68,7 +69,7 @@ export const ICountDownButtonDisabledProps = styled(
       border-color: ${borderColor};
     `}
 `;
-export const CountdownButton = styled(TouchableOpacity)<ICountDownButtonProps>`
+export const CountdownButton = styled(Pressable)<ICountDownButtonProps>`
   flex-flow: row;
   justify-content: center;
   align-items: center;
