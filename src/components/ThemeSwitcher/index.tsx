@@ -1,6 +1,6 @@
 import React from 'react';
 import {useThemeSwitcher} from '../../hooks/themeSwitcher';
-import {DarkTheme} from '../../styles/themes';
+import {DarkTheme, LightTheme} from '../../styles/themes';
 import {Switcher} from './styles';
 
 const ThemeSwitcher: React.FC = () => {
@@ -8,7 +8,7 @@ const ThemeSwitcher: React.FC = () => {
 
   return (
     <Switcher
-      value={theme.title === DarkTheme.title}
+      value={theme === DarkTheme}
       onValueChange={toggleTheme}
       thumbColor={theme.colors.challengeBoxBackground}
     />

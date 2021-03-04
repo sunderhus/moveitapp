@@ -48,7 +48,7 @@ const TheSwitcherProvider: React.FC = ({children}) => {
   }, [selectedTheme]);
 
   const handleToggleTheme = useCallback(() => {
-    if (selectedTheme === LightTheme) {
+    if (selectedTheme.title.toUpperCase() === LightTheme.title.toUpperCase()) {
       setSelectedTheme(DarkTheme);
       return;
     }
