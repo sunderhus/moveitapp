@@ -8,7 +8,7 @@ interface IChallengeButtonProps {
 
 export const Container = styled.View`
   flex: 1;
-  background: ${Colors.white};
+  background: ${({theme}) => theme.colors.challengeBoxBackground};
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   padding: 16px 32px;
@@ -26,6 +26,7 @@ export const NotActiveTitle = styled.Text`
   font-size: 24px;
   margin-bottom: 16px;
   flex-flow: row;
+  color: ${(props) => props.theme.colors.title};
 `;
 export const NotActiveSubTitle = styled.Text`
   flex-flow: row;
@@ -33,6 +34,7 @@ export const NotActiveSubTitle = styled.Text`
   text-align: center;
   max-width: 70%;
   margin-top: 16px;
+  color: ${(props) => props.theme.colors.text};
 `;
 
 export const ChallengeActive = styled.View`
@@ -43,7 +45,8 @@ export const ChallengeActiveHeader = styled.Text`
   text-align: center;
   flex: 1;
   flex-flow: row;
-  color: ${Colors.blue};
+  color: ${(props) => props.theme.colors.secundary};
+
   border-bottom-width: 1px;
   border-bottom-color: ${Colors.greyLine};
   font-family: ${Fonts.inter.semiBold};
@@ -60,7 +63,8 @@ export const ChallengeActiveMain = styled.View`
 export const ChallengeDescription = styled.Text`
   font-family: ${Fonts.inter.regular};
   font-size: 16px;
-  color: ${Colors.text};
+  color: ${(props) => props.theme.colors.title};
+
   text-align: center;
 `;
 

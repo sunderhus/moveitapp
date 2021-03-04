@@ -4,6 +4,7 @@ import BodyIcon from '../../assets/icons/body.svg';
 import LevelUpIcon from '../../assets/icons/level-up.svg';
 import {useChallenge} from '../../hooks/challenge';
 import {useCountdown} from '../../hooks/countdown';
+import {useThemeSwitcher} from '../../hooks/themeSwitcher';
 import {Colors} from '../../styles/global';
 import {
   ChallengeActive,
@@ -22,7 +23,7 @@ import {
 const ChallengeBox: React.FC = () => {
   const {activeChallenge, resetChallenge, completeChallenge} = useChallenge();
   const {resetCountdown} = useCountdown();
-
+  const {theme} = useThemeSwitcher();
   const handleChallengeSucceeded = useCallback(() => {
     completeChallenge();
     resetCountdown();
@@ -40,7 +41,12 @@ const ChallengeBox: React.FC = () => {
           <ChallengeActiveHeader>{`Ganhe ${activeChallenge.amount}xp`}</ChallengeActiveHeader>
           <ChallengeActiveMain>
             <BodyIcon />
-            <Text style={{textAlign: 'center', fontSize: 24}}>
+            <Text
+              style={{
+                textAlign: 'center',
+                fontSize: 24,
+                color: `${theme.colors.title}`,
+              }}>
               Novo Desafio
             </Text>
             <ChallengeDescription>

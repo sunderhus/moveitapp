@@ -1,5 +1,4 @@
 import 'styled-components';
-import {Colors} from '../styles/global';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -8,10 +7,15 @@ declare module 'styled-components' {
     colors: {
       primary: string;
       secundary: string;
+      terciary: string;
 
       background: string;
       text: string;
       title: string;
+      cardBackground: string;
+      countdownButtonBackGround: string;
+      overlay: string;
+      challengeBoxBackground: string;
     };
   }
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import {Fonts, Colors} from '../../styles/global';
+import {Fonts} from '../../styles/global';
 
 export const ProfileContainer = styled.View`
   flex: 1;
@@ -20,6 +20,7 @@ export const ProfileInfos = styled.View`
 
 export const ProfileName = styled.Text`
   font-size: 24px;
+  color: ${({theme}) => theme.colors.title};
 `;
 
 export const ProfileLevelContainer = styled.View`
@@ -29,6 +30,6 @@ export const ProfileLevelContainer = styled.View`
 
 export const Level = styled.Text`
   font-family: ${Fonts.inter.regular};
-  color: ${Colors.text};
+  color: ${({theme}) => theme.colors.text};
   margin-left: 4px;
 `;

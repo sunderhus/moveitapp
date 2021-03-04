@@ -15,11 +15,11 @@ export const Container = styled.View`
 export const ChallengesText = styled.Text`
   font-size: 16px;
   font-family: ${Fonts.inter.regular};
-  color: ${Colors.title};
+  color: ${({theme}) => theme.colors.text};
 `;
 
 export const ChallengesNumber = styled.Text`
   font-size: 24px;
   font-family: ${Fonts.inter.regular};
-  color: ${Colors.title};
+  color: ${({theme}) => theme.colors.title};
 `;

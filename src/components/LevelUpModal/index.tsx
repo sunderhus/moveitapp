@@ -2,6 +2,7 @@ import React from 'react';
 import CloseIcon from '../../assets/icons/close.svg';
 import LevelUpIcon from '../../assets/icons/levelup.svg';
 import {useChallenge} from '../../hooks/challenge';
+import {useThemeSwitcher} from '../../hooks/themeSwitcher';
 import {
   Description,
   ModalCloseButton,
@@ -13,6 +14,7 @@ import {
 
 const LevelUpModal: React.FC = () => {
   const {level, closeLevelUpModal} = useChallenge();
+  const {theme} = useThemeSwitcher();
 
   return (
     <Overlay>

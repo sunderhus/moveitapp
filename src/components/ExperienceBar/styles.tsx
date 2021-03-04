@@ -12,7 +12,7 @@ export const ExperienceBarContainer = styled.SafeAreaView`
 export const ExperienceText = styled.Text`
   font-size: 16px;
   font-family: ${Fonts.inter.regular};
-  color: ${Colors.text};
+  color: ${({theme}) => theme.colors.text};
 `;
 
 export const ProgressContainer = styled.View`

@@ -30,13 +30,14 @@ export const CountdownCardsGroup = styled.View`
   flex: 1;
   flex-flow: row;
   justify-content: space-evenly;
-  background: ${Colors.white};
+  background: ${({theme}) => theme.colors.cardBackground};
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
 `;
 
 export const CountdownCard = styled.Text`
   font-size: 82px;
+  color: ${({theme}) => theme.colors.title};
 `;
 
 export const Line = styled.View`
@@ -48,6 +49,7 @@ export const Line = styled.View`
 export const CountdownSeparator = styled.Text`
   font-size: 82px;
   margin: 0 8px;
+  color: ${({theme}) => theme.colors.title};
 `;
 
 export const ICountDownButtonDisabledProps = styled(
@@ -58,9 +60,8 @@ export const ICountDownButtonDisabledProps = styled(
   align-items: center;
   height: 64px;
   margin-top: 32px;
-  background: ${Colors.white};
-  color: ${Colors.title};
   margin-bottom: 32px;
+  background: ${({theme}) => theme.colors.cardBackground};
 
   ${({borderColor}) =>
     borderColor &&
