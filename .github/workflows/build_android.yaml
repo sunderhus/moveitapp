@@ -9,26 +9,27 @@ on:
 
 jobs:
   configure-setup:
+    name: define node matrix
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
 
     steps:
-      - name: Setup NodeJS
+        name: Setup NodeJS
         uses: actions/setup-node@v2.1.2
         with:
           node-version: ${{matrix.node-version}}
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: checkout
-      - uses: actions/checkout@v2
+        name: checkout
+        uses: actions/checkout@v2
 
-      - name: Install dependencies
-      - run: yarn
+        name: Install dependencies
+        run: yarn
 
-      - name: Build Android Release
+        name: Build Android Release
         run: cd android && chmod +x ./gradlew && ./gradlew assembleRelease
-      - name: Upload Artifact
+        name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
           name: moveit.apk
